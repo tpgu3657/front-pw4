@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs')  %>
+
+<title>EDIÇÃO DE INSTRUMENTOS - LIBRI</title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card mt-2">
+            <div class="card-header">EDIÇÃO DE INSTRUMENTOS</div>
+        </div>
+
+        <div class="card-body">
+            <form action="http://localhost:3001/alterarInstrumento" method="post">
+                
+                <label for="">INSTRUMENTO</label>
+
+                <input
+                    type="hidden"
+                    name="id" id="id"
+                    value="<%= instrumento.id %>"/>
+
+                <input type="text" class="form-control" 
+                        name="nome_instrumento" id="nome_instrumento"
+                        placeholder="DIGITE UM INSTRUMENTO "
+                        value="<%= instrumento.nome_instrumento %>">
+                
+                <button class="btn btn-success mt-2">EDITAR</button>
+            </form>
+        </div>
+    </div>
+
+    </body>
+
+<%- include('../partials/footer.ejs')  %>
